@@ -15,7 +15,7 @@
   src: url('fonts/abeezee-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* ===== BASE & FLUID TYPE SCALE ===== */
+/* This is base and fluid type scale going to go.*/
 :root{
   --green: #8acb88;
   --light-green: #dff6e1;
@@ -39,7 +39,6 @@ body {
   line-height: 1.6;
 }
 
-/* NAVIGATION */
 header { background: var(--green); border-bottom: 4px solid var(--pink); }
 .nav ul {
   display:flex;
@@ -57,14 +56,13 @@ header { background: var(--green); border-bottom: 4px solid var(--pink); }
   padding: 6px 10px;
   border-radius: 6px;
 }
-/* hover & focus */
+
 .nav a:hover,
 .nav a:focus {
   background: #fff0f4;
   color: #203020;
 }
 
-/* active page */
 .nav a[aria-current="page"] {
   background: var(--green);
   color: white;
@@ -75,7 +73,6 @@ header { background: var(--green); border-bottom: 4px solid var(--pink); }
 }
 
 
-/* NAV WRAPPER */
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -85,7 +82,6 @@ header { background: var(--green); border-bottom: 4px solid var(--pink); }
   justify-content: space-between;
 }
 
-/* LOGO BADGE */
 .logo a {
   position: relative;
   font-family: 'ABeeZee', sans-serif;
@@ -103,7 +99,7 @@ header { background: var(--green); border-bottom: 4px solid var(--pink); }
   overflow: hidden;
 }
 
-/* GLITTER SHIMMER */
+/* This is the glitter.*/
 .logo a::after {
   content: "";
   position: absolute;
@@ -121,7 +117,6 @@ header { background: var(--green); border-bottom: 4px solid var(--pink); }
   transition: left 0.6s ease;
 }
 
-/* HOVER EFFECT */
 .logo a:hover::after {
   left: 140%;
 }
@@ -134,7 +129,6 @@ header { background: var(--green); border-bottom: 4px solid var(--pink); }
 }
 
 
-/* NAV LINKS */
 .nav-links {
   display: flex;
   gap: 18px;
@@ -151,8 +145,6 @@ header { background: var(--green); border-bottom: 4px solid var(--pink); }
   border-radius: 6px;
 }
 
-
-
  /*This is where you are going to put the bubble background effect.*/
 body::before,
 body::after {
@@ -161,10 +153,10 @@ body::after {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* This will push behind all content. */
+  z-index: -1; 
   background-repeat: repeat;
   background-size: 200px 200px;
-  pointer-events: none; /* This will prevents blocking clicks. */
+  pointer-events: none; 
 }
  
 
@@ -176,7 +168,7 @@ body::after {
   animation: floatBubbles 25s linear infinite;
   opacity: 0.7;
 }
-/* This is the animation to move the bubbles upward and around. */
+/* This is the animation to move the bubbles upward and around.*/
  @keyframes floatBubbles {
   0% {
     background-position: 0 100%, 50% 120%, 100% 90%;
@@ -197,10 +189,8 @@ body::after {
     padding: 1em;
   }
 }
- /*ENDED*/
 
-/* HERO */
-.hero {
+ .hero {
   min-height: 360px;
   display:flex;
   align-items:center;
@@ -214,7 +204,7 @@ body::after {
 .hero-inner { max-width: 980px; }
 .lead { font-size: clamp(1rem, 2.2vw, 1.2rem); margin-top: 0.4rem; opacity: 0.95; }
 
-/* CTA BUTTONS */
+
 a.btn, button.btn {
   display:inline-block;
   background: var(--pink);
@@ -226,20 +216,19 @@ a.btn, button.btn {
   transition: all .2s ease;
 }
 a.btn.ghost {
-  background: var(--green);        /* green button */
-  color: white;                     /* white text */
-  border: 2px solid var(--green);   /* green border */
+  background: var(--green);       
+  color: white;                     
+  border: 2px solid var(--green);   
 }
 
 a.btn.ghost:hover {
-  background: #79b87a;              /* lighter green on hover */
+  background: #79b87a;              
   border-color: #79b87a;
   transform: translateY(-3px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 a.btn:hover, button.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
 
-/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: 30px auto;
@@ -249,7 +238,6 @@ a.btn:hover, button.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 1
   box-shadow: 0 6px 24px rgba(32,48,32,0.06);
 }
 
-/* TITLES */
 .page-title { font-size: clamp(1.4rem, 3vw, 2rem); margin-top: 0; }
 .section-title {
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
@@ -260,15 +248,14 @@ a.btn:hover, button.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 1
 }
 
 
-/* Design statement list styling */
 .design-list {
-  list-style: none;      /* removes bullet points */
-  padding-left: 0;       /* removes default indent */
+  list-style: none;      
+  padding-left: 0;       
 }
 
 .design-list li {
-  margin-bottom: 1rem;   /* space between items */
-  line-height: 1.6;      /* nicer readability */
+  margin-bottom: 1rem;   
+  line-height: 1.6;      
 }
 
 /* RECIPE  */
@@ -283,25 +270,25 @@ a.btn:hover, button.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 1
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(32,48,32,0.08);
 }
-/* RECIPE  */
-.recipe-image {
+ 
+ .recipe-image {
   width: 400px;
-  height: 300px; /* forces the image to a fixed size, may distort aspect ratio */
-  object-fit: cover; /* crops to fill without distortion */
+  height: 300px; /* This forces the image to a fixed size */
+  object-fit: cover; 
 }
-/* GRID (CSS Grid requirement) */
+
 .grid {
   display: grid;
   gap: 22px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  align-items: stretch; /* important! makes all cards same height in a row */
+  align-items: stretch; /* This makes the cards be the same height and go in a row */
 }
 
 .recipe-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* spreads content evenly */
-  height: 100%;                   /* makes the card fill its grid cell */
+  justify-content: space-between;  
+  height: 100%;                    
 }
 /* CARDS */
 .card, .recipe-card {
@@ -322,17 +309,14 @@ a.btn:hover, button.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 1
 }
 .card:hover, .recipe-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(32,48,32,0.08); }
 
-/* BUTTON VARIANTS */
-.btn.small { padding: 8px 12px; font-size: 0.95rem; border-radius: 6px; }
+ .btn.small { padding: 8px 12px; font-size: 0.95rem; border-radius: 6px; }
 .btn.ghost { background: transparent; border: 2px solid rgba(255,255,255,0.12); color: white; }
 
-/* MISC */
-.divider { width: 80px; height: 6px; background: var(--green); border-radius: 4px; margin: 28px auto; }
+ .divider { width: 80px; height: 6px; background: var(--green); border-radius: 4px; margin: 28px auto; }
 .muted { color: rgba(32,48,32,0.6); font-size: 0.95rem; }
 .small-muted { color: rgba(32,48,32,0.5); font-size: 0.85rem; }
 
-/* CONTACT FORM */
-.contact-form label { display:block; margin-top: 12px; font-weight:600; }
+ .contact-form label { display:block; margin-top: 12px; font-weight:600; }
 .contact-form input, .contact-form textarea {
   width:100%; padding:10px; margin-top:6px; border-radius:6px; border:1px solid #e6e6e6;
   font-family: inherit;
