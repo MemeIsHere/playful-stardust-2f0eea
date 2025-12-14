@@ -57,14 +57,19 @@ header { background: var(--green); border-bottom: 4px solid var(--pink); }
   padding: 6px 10px;
   border-radius: 6px;
 }
-/* NAV LINK HOVER / ACTIVE */
+/* hover & focus */
 .nav a:hover,
-.nav a:focus,
-.nav a[aria-current="page"] {
+.nav a:focus {
   background: #fff0f4;
   color: #203020;
-  outline: none;
 }
+
+/* active page */
+.nav a[aria-current="page"] {
+  background: var(--green);
+  color: white;
+}
+
 .nav a {
   transition: background 0.25s ease, color 0.25s ease;
 }
@@ -259,6 +264,17 @@ a.btn:hover, button.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 1
   display: grid;
   gap: 22px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Design statement list styling */
+.design-list {
+  list-style: none;      /* removes bullet points */
+  padding-left: 0;       /* removes default indent */
+}
+
+.design-list li {
+  margin-bottom: 1rem;   /* space between items */
+  line-height: 1.6;      /* nicer readability */
 }
 
 /* RECIPE  */
